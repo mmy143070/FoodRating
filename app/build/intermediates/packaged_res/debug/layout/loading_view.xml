@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.wang.avi.AVLoadingIndicatorView android:id="@+id/loading_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:indicatorName="BallPulseIndicator"
+    app:indicatorColor="@color/gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

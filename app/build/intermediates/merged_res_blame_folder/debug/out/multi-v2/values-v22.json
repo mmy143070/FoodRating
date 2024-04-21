@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.FoodRating.app-mergeDebugResources-64:/values-v22/values-v22.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\14307\\.gradle\\caches\\transforms-3\\21690f34c18f24d6f274c3144c32fd05\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
+                    "from": {
+                        "startLines": "2,3,4,9",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,130,217,487",
+                        "endLines": "2,3,8,13",
+                        "endColumns": "74,86,12,12",
+                        "endOffsets": "125,212,482,764"
+                    }
+                }
+            ]
+        }
+    ]
+}

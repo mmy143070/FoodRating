@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/u_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/u_spinner"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="97dp"
+        android:layout_marginLeft="197dp"
+        android:layout_marginTop="-3dp"
+        android:layout_toEndOf="@+id/u_spinner"
+        android:ems="10"
+        android:hint="输入修改后的评论" />
+
+    <Spinner
+        android:id="@+id/u_spinner"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:prompt="@string/hint"
+        android:spinnerMode="dialog" />
+
+
+
+
+</RelativeLayout>
