@@ -5093,6 +5093,8 @@ int id my_cm_name 0x7f0901ed
 int id my_cm_score 0x7f0901ee
 int id my_cm_text 0x7f0901ef
 int id my_comment_image 0x7f0901f0
+int id my_detail_lv 0x7f090322
+int id my_listview 0x7f090323
 int id myname 0x7f0901f1
 int id navigation_bar_item_active_indicator_view 0x7f0901f3
 int id navigation_bar_item_icon_container 0x7f0901f4

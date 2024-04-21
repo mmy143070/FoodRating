@@ -53,7 +53,7 @@
             android:textSize="30sp" />
 
         <com.example.FoodRating.MyListView
-            android:id="@+id/detail_lv"
+            android:id="@+id/my_detail_lv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

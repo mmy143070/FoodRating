@@ -97,35 +97,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             ToastUtil.show(ctx, "用户名不可用");
             isOK = false;
         }
-
-
-//        client.newCall(request).enqueue(new Callback() {
-//            @Override
-//            public void onFailure(@NonNull Call call, @NonNull IOException e) {
-//
-//            }
-//
-//            @Override
-//            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-//                Log.i("tag", String.valueOf(response.code()));
-//                String j = response.body().string();
-//                Log.i("tag", j);
-//                UserDocument document = gson.fromJson(j, UserDocument.class);
-//                Log.i("tag", String.valueOf(document.getUser() == null));
-//                runOnUiThread(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        if (document.getUser() == null) {
-//                            ToastUtil.show(ctx, "用户名可用");
-//                            isOK = true;
-//                        } else {
-//                            ToastUtil.show(ctx, "用户名不可用");
-//                            isOK = false;
-//                        }
-//                    }
-//                });
-//            }
-//        });
     }
 
     //注册逻辑实现
@@ -145,41 +116,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         } else if (!isOK) {
             ToastUtil.show(this, "用户名未检查或不可用");
         } else {
-//            user = new User(ru, rps, true);
-//            String juser = gson.toJson(user);
-//            Log.i("tag", juser);
-//            new Thread(){
-//                @Override
-//                public void run() {
-//                    OkHttpClient client = new OkHttpClient().newBuilder()
-//                            .build();
-//                    String json = "{\n" +
-//                            "    \"dataSource\": \"Cluster0\",\n" +
-//                            "    \"database\": \"androidDB\",\n" +
-//                            "    \"collection\": \"users\",\n" +
-//                            "    \"document\": "+juser+"}";
-////                    MediaType mediaType = MediaType.parse("application/ejson");
-//                    RequestBody body = RequestBody.create(json.getBytes(StandardCharsets.UTF_8 ));
-//                    Request request = new Request.Builder()
-//                            .get()
-//                            .url("https://us-east-2.aws.data.mongodb-api.com/app/data-bwxcu/endpoint/data/v1/action/insertOne")
-//                            .addHeader("Content-Type", "application/ejson")
-//                            .addHeader("apiKey", "rdX9XZwcsHKZm0qpBk3j6yOoASMBNWbNmNwvjmvmhnpvSqsAHcKpCwJDeebMNr6Y")
-////                            .addHeader("Accept", "application/json")
-//                            .post(body)
-//                            .build();
-//
-//                    try {
-//                        Response response = client.newCall(request).execute();
-//                        Log.i("tag", String.valueOf(response.code()));
-//                        code = response.code();
-//
-//                    } catch (IOException e) {
-//                        throw new RuntimeException(e);
-//                    }
-//
-//                }
-//            }.start();
             user = new User(ru, rps, isStudent);
             String juser = gson.toJson(user);
             Log.i("tag", juser);

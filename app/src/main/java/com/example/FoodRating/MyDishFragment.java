@@ -20,6 +20,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.FoodRating.database.MongoDB;
 import com.example.FoodRating.entity.BigBinder;
+import com.example.FoodRating.entity.BigBinderComment;
 import com.example.FoodRating.entity.Comment;
 import com.example.FoodRating.entity.Dish;
 import com.example.FoodRating.util.ImageUtil;
@@ -160,7 +161,7 @@ public class MyDishFragment extends Fragment implements AdapterView.OnItemClickL
         View view = inflater.inflate(R.layout.fragment_my_dish, container, false);
         loadingView = view.findViewById(R.id.loading_view2);
 //        loadingView.show(); // 启动动画
-        listView = view.findViewById(R.id.listview);
+        listView = view.findViewById(R.id.my_listview);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(this);
 //        loadingView.hide(); // 停止动画
@@ -235,12 +236,13 @@ public class MyDishFragment extends Fragment implements AdapterView.OnItemClickL
         assert comments != null;
         comments.toArray();
         BigBinder bigData = new BigBinder(s_image);
+        BigBinderComment comment = new BigBinderComment(comments);
         Bundle bundle = new Bundle();
         bundle.putString("username", username);
         bundle.putString("foodName", name);
         bundle.putString("desc", desc);
         bundle.putBinder("image", bigData);
-        bundle.putParcelableArrayList("comments", comments);
+        bundle.putBinder("comments", comment);
         Intent intent = new Intent(getContext(), MyDishDetailActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);

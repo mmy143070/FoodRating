@@ -5094,6 +5094,8 @@ id my_cm_name
 id my_cm_score
 id my_cm_text
 id my_comment_image
+id my_detail_lv
+id my_listview
 id myname
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container

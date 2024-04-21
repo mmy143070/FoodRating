@@ -18,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.FoodRating.database.MongoDB;
 import com.example.FoodRating.entity.BigBinder;
+import com.example.FoodRating.entity.BigBinderComment;
 import com.example.FoodRating.entity.Comment;
 import com.example.FoodRating.util.ImageUtil;
 import com.example.FoodRating.util.ToastUtil;
@@ -63,7 +64,8 @@ public class MyDishDetailActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
             s_username = bundle.getString("username");
-            comments = bundle.getParcelableArrayList("comments");
+            BigBinderComment bigBinderComment = (BigBinderComment) bundle.getBinder("comments");
+            comments = bigBinderComment.getData();
             s_dishName = bundle.getString("foodName");
             s_desc = bundle.getString("desc");
             BigBinder bigBinder = (BigBinder) bundle.getBinder("image");
@@ -73,9 +75,23 @@ public class MyDishDetailActivity extends AppCompatActivity {
         describe.setText(s_desc);
         Bitmap image = ImageUtil.Base64toBitmap(s_image);
         imageView.setImageBitmap(image);
-        listView = findViewById(R.id.detail_lv);
-        simpleAdapter = new SimpleAdapter(this, getData(), R.layout.comment_item_layout, new String[]{"name", "score", "comment"}, new int[]{R.id.detail_name, R.id.detail_score, R.id.detail_comment});
-
+        listView = findViewById(R.id.my_detail_lv);
+        simpleAdapter = new SimpleAdapter(this, getData(), R.layout.comment_item_layout, new String[]{"name", "score", "comment", "image"}, new int[]{R.id.detail_name, R.id.detail_score, R.id.detail_comment, R.id.comment_image});
+        simpleAdapter.setViewBinder(new SimpleAdapter.ViewBinder() {
+            @Override
+            public boolean setViewValue(View view, Object data, String textRepresentation) {
+                if (view.getId() == R.id.comment_image) {
+                    ImageView imageView = (ImageView) view;
+                    if (data!="") {
+                        imageView.setImageBitmap((Bitmap) data);
+                    }else{
+                        imageView.setVisibility(View.INVISIBLE);
+                    }
+                    return true;
+                }
+                return false;
+            }
+        });
         listView.setAdapter(simpleAdapter);
 
         String[] items = {"5", "4", "3", "2", "1"};
@@ -99,8 +115,8 @@ public class MyDishDetailActivity extends AppCompatActivity {
     }
 
     private void DeleteDish() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setIcon(R.drawable.ic_launcher_foreground);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
+        builder.setIcon(R.drawable.food);
         builder.setTitle("确定删除吗");
         final View view = getLayoutInflater().inflate(R.layout.dialog, null);
         view.findViewById(R.id.u_text).setVisibility(View.GONE);
@@ -156,6 +172,7 @@ public class MyDishDetailActivity extends AppCompatActivity {
         ArrayList<String> names = new ArrayList<>();
         ArrayList<String> scores = new ArrayList<>();
         ArrayList<String> texts = new ArrayList<>();
+        ArrayList<Bitmap> images = new ArrayList<>();
         List<Map<String, Object>> list = new ArrayList<>();
         if (comments.size() != 0) {
 
@@ -163,6 +180,7 @@ public class MyDishDetailActivity extends AppCompatActivity {
                 names.add(comment.getUsername());
                 scores.add(comment.getScore());
                 texts.add(comment.getText());
+                images.add(ImageUtil.Base64toBitmap(comment.getImage()));
             }
 //        String [] names={"水果1","水果2","水果3"};
 //        String [] scores={"4","3","5"};
@@ -174,6 +192,7 @@ public class MyDishDetailActivity extends AppCompatActivity {
                 map.put("name", names.get(j));
                 map.put("score", scores.get(j));
                 map.put("comment", texts.get(j));
+                map.put("image", images.get(j));
                 list.add(map);
             }
             Log.i("tag", list.toString());

@@ -12,10 +12,6 @@
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\drawable\\exit.png"
     },
     {
-        "merged": "com.example.FoodRating.app-merged_res-66:/layout_activity_my_dish_detail.xml.flat",
-        "source": "com.example.FoodRating.app-main-68:/layout/activity_my_dish_detail.xml"
-    },
-    {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\layout_loading_view.xml.flat",
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\layout\\loading_view.xml"
     },
@@ -84,6 +80,10 @@
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\layout_fragment_my_dish.xml.flat",
+        "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\layout\\fragment_my_dish.xml"
+    },
+    {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\layout\\fragment_my.xml"
     },
     {
-        "merged": "com.example.FoodRating.app-merged_res-66:/layout_fragment_main.xml.flat",
-        "source": "com.example.FoodRating.app-main-68:/layout/fragment_main.xml"
-    },
-    {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\drawable_shaixuan.png.flat",
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\drawable\\shaixuan.png"
+    },
+    {
+        "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\layout_activity_my_dish_detail.xml.flat",
+        "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\layout\\activity_my_dish_detail.xml"
     },
     {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\layout_activity_main.xml.flat",
@@ -162,6 +162,10 @@
     {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\layout_fragment_main.xml.flat",
+        "source": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-main-68:\\layout\\fragment_main.xml"
     },
     {
         "merged": "C:\\Users\\14307\\.gradle\\daemon\\8.0\\com.example.FoodRating.app-merged_res-66:\\mipmap-hdpi_ic_launcher.webp.flat",
