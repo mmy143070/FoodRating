@@ -59,10 +59,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Login" />
         <activity
-            android:name="com.example.FoodRating.ScrollActivity"
-            android:exported="false" />
-        <activity
-            android:name="com.example.FoodRating.DetailActivity2"
+            android:name="com.example.FoodRating.MyDishDetailActivity"
             android:exported="false" />
         <activity
             android:name="com.example.FoodRating.RegisterActivity"

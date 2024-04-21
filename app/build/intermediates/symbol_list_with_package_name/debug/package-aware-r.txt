@@ -4901,8 +4901,6 @@ id fixed
 id fl_border
 id flip
 id floating
-id food_desc
-id food_name
 id forever
 id forty
 id fragment_container_view
@@ -5004,7 +5002,6 @@ id lpassword
 id lsta_button
 id lstu_button
 id lusername
-id lv
 id m3_side_sheet
 id marquee
 id masked
@@ -5098,7 +5095,6 @@ id my_cm_score
 id my_cm_text
 id my_comment_image
 id myname
-id navigation_account
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -5106,7 +5102,6 @@ id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
-id navigation_home
 id never
 id neverCompleteToEnd
 id neverCompleteToStart
@@ -5510,15 +5505,13 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_detail
-layout activity_detail2
 layout activity_login
 layout activity_main
 layout activity_my_comments
 layout activity_my_dish
+layout activity_my_dish_detail
 layout activity_post_dish
 layout activity_register
-layout activity_scroll
-layout activity_upload
 layout bottom_layout
 layout comment_item_layout
 layout custom_dialog
@@ -5540,10 +5533,9 @@ layout design_text_input_start_icon
 layout dialog
 layout dish_item_layout
 layout fragment_account
-layout fragment_blank
-layout fragment_blank2
+layout fragment_main
 layout fragment_my
-layout fragment_scrolling
+layout fragment_my_dish
 layout gcv_layout_image
 layout gcv_layout_title
 layout loading_view
@@ -5683,7 +5675,6 @@ layout xui_layout_spinner_selected_item
 layout xui_layout_stateful_template
 layout xui_layout_verify_code
 layout xui_layout_xtoast
-menu bottom_navigation_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

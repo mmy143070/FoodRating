@@ -109,5 +109,5 @@
         <item name="colorPrimaryDark">#03A9F4</item>
         <item name="colorAccent">#2196F3</item>
     </style>
-    <style name="Theme.Login" parent="XUITheme.Phone"/>
+    <style name="Theme.Login" parent="Base.Theme.Login"/>
 </resources>

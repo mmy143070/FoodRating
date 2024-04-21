@@ -41,10 +41,10 @@ import okhttp3.Response;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlankFragment2#newInstance} factory method to
+ * Use the {@link MyDishFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment2 extends Fragment implements AdapterView.OnItemClickListener {
+public class MyDishFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,7 +67,7 @@ public class BlankFragment2 extends Fragment implements AdapterView.OnItemClickL
     private ArrayAdapter<Map<String, Object>> arrayAdapter;
 
 
-    public BlankFragment2() {
+    public MyDishFragment() {
         // Required empty public constructor
     }
 
@@ -79,8 +79,8 @@ public class BlankFragment2 extends Fragment implements AdapterView.OnItemClickL
      * @return A new instance of fragment BlankFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BlankFragment2 newInstance(String param1, String p_staffName) {
-        BlankFragment2 fragment = new BlankFragment2();
+    public static MyDishFragment newInstance(String param1, String p_staffName) {
+        MyDishFragment fragment = new MyDishFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, p_staffName);
@@ -157,7 +157,7 @@ public class BlankFragment2 extends Fragment implements AdapterView.OnItemClickL
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blank2, container, false);
+        View view = inflater.inflate(R.layout.fragment_my_dish, container, false);
         loadingView = view.findViewById(R.id.loading_view2);
 //        loadingView.show(); // 启动动画
         listView = view.findViewById(R.id.listview);
@@ -241,7 +241,7 @@ public class BlankFragment2 extends Fragment implements AdapterView.OnItemClickL
         bundle.putString("desc", desc);
         bundle.putBinder("image", bigData);
         bundle.putParcelableArrayList("comments", comments);
-        Intent intent = new Intent(getContext(), DetailActivity2.class);
+        Intent intent = new Intent(getContext(), MyDishDetailActivity.class);
         intent.putExtras(bundle);
         startActivity(intent);
     }

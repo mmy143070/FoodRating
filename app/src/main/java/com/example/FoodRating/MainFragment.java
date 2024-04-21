@@ -200,7 +200,7 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_blank, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
         loadingView = view.findViewById(R.id.loading_view);
 //        loadingView.show(); // 启动动画
         listView = view.findViewById(R.id.listview);

@@ -42,10 +42,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/Theme.Login" />
         <activity
-            android:name=".ScrollActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DetailActivity2"
+            android:name=".MyDishDetailActivity"
             android:exported="false" />
         <activity
             android:name=".RegisterActivity"

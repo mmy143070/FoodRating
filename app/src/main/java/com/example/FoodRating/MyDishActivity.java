@@ -19,7 +19,7 @@ public class MyDishActivity extends AppCompatActivity {
         if (bundle!=null){
             username = bundle.getString("username");
         }
-        BlankFragment2 fragment = BlankFragment2.newInstance(username, username);
+        MyDishFragment fragment = MyDishFragment.newInstance(username, username);
 
         // 获取FragmentManager和FragmentTransaction
         FragmentManager manager = getSupportFragmentManager();

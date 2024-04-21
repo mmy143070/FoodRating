@@ -29,7 +29,7 @@ import java.util.Map;
 
 import okhttp3.Response;
 
-public class DetailActivity2 extends AppCompatActivity {
+public class MyDishDetailActivity extends AppCompatActivity {
     private ListView listView;
     private SimpleAdapter simpleAdapter;
     private ArrayList<Comment> comments;
@@ -44,7 +44,7 @@ public class DetailActivity2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail2);
+        setContentView(R.layout.activity_my_dish_detail);
         mongoDB = new MongoDB();
         dishName = findViewById(R.id.dish_name);
         describe = findViewById(R.id.detail_information);
@@ -109,10 +109,10 @@ public class DetailActivity2 extends AppCompatActivity {
         builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                ToastUtil.show(DetailActivity2.this,"删除中");
+                ToastUtil.show(MyDishDetailActivity.this,"删除中");
                 Response response = mongoDB.DeleteOne("meals", "{\"name\":\"" + s_dishName + "\"}", true);
                 if(response.isSuccessful()){
-                    ToastUtil.show(DetailActivity2.this,"删除成功");
+                    ToastUtil.show(MyDishDetailActivity.this,"删除成功");
                 }
                 dialog.cancel();
             }
