@@ -16,8 +16,7 @@
         <Spinner
             android:id="@+id/rank_spinner"
             android:layout_width="72sp"
-            android:layout_height="50sp"
-            android:foreground="@drawable/shaixuan"/>
+            android:layout_height="50sp"/>
 <!--            android:prompt="@string/hint" />-->
 
         <SearchView
@@ -29,7 +28,7 @@
             android:layout_gravity="center"
             android:layout_marginStart="72dp"
             android:layout_marginEnd="72dp"
-            android:queryHint="输入食物名称" />
+            android:queryHint="Input food name" />
 
         <ImageButton
             android:id="@+id/im_btn"

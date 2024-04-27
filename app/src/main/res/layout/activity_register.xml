@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="注册"
+        android:text="Register"
         android:textSize="40dp"
         android:layout_gravity="center"
         />
@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="用户名："
+            android:text="Username"
             android:textSize="20dp"
 
             android:layout_marginTop="3dp"
@@ -33,13 +33,13 @@
             android:layout_height="wrap_content"
             android:inputType="text"
             android:maxLength="20"
-            android:hint="请输入你的用户名"/>
+            android:hint="Please input your username"/>
         <Button
             android:id="@+id/check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="10dp"
-            android:text="检查是否可用"
+            android:text="Check if available"
 
             />
     </LinearLayout>
@@ -52,7 +52,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="密码："
+            android:text="Password:"
             android:textSize="20dp"
             android:layout_marginTop="3dp"
             />
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLength="20"
-            android:hint="请入你的密码"/>
+            android:hint="Please input your password"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="确认密码："
+            android:text="Confirm password:"
             android:textSize="20dp"
             android:layout_marginTop="3dp"
             />
@@ -83,7 +83,7 @@
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:maxLength="20"
-            android:hint="确认密码"/>
+            android:hint="Please confirm your password"/>
     </LinearLayout>
 
     <LinearLayout
@@ -103,13 +103,13 @@
                 android:id="@+id/stu_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我是学生" />
+                android:text="I am a student" />
 
             <RadioButton
                 android:id="@+id/sta_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="我是员工" />
+                android:text="I am a staff" />
         </RadioGroup>
 
     </LinearLayout>
@@ -120,7 +120,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="注册"
+        android:text="Register"
         />
     <Button android:id="@+id/fh"
         android:layout_gravity="center"
@@ -128,7 +128,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:text="返回登录"
+        android:text="Back to login"
         />
 
 </LinearLayout>

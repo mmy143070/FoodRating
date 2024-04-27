@@ -232,7 +232,7 @@ public class MainFragment extends Fragment implements AdapterView.OnItemClickLis
             }
         });
 //        loadingView.hide(); // 停止动画
-        String[] items = {"按评分由高到低", "按评分由低到高"};
+        String[] items = {"Ranked from high to low", "Ranked from low to high"};
 
         Spinner spinner = view.findViewById(R.id.rank_spinner);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(requireActivity(), android.R.layout.simple_spinner_item, items);

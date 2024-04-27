@@ -14,7 +14,7 @@
         android:layout_marginTop="-3dp"
         android:layout_toEndOf="@+id/u_spinner"
         android:ems="10"
-        android:hint="输入修改后的评论" />
+        android:hint="Input comment text" />
 
     <Spinner
         android:id="@+id/u_spinner"

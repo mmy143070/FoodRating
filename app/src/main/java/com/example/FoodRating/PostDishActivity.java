@@ -88,23 +88,23 @@ public class PostDishActivity extends AppCompatActivity implements View.OnClickL
         String s_name = foodName.getText().toString();
         String s_intro = intro.getText().toString();
         if (s_name.equals("")) {
-            ToastUtil.show(this, "请输入食物名");
+            ToastUtil.show(this, "Please enter the food name");
         } else if (s_intro.equals("")) {
-            ToastUtil.show(this, "请输入食物介绍");
+            ToastUtil.show(this, "Please enter the food introduction");
         } else if (uri == null) {
-            ToastUtil.show(this, "请选择食物图片");
+            ToastUtil.show(this, "Please select a food image");
         } else {
             List<Comment> commentList = new ArrayList<>();
             Dish dish = new Dish(s_name, s_intro, ima_string, "-1", commentList, username);
             Gson gson = new Gson();
             String json = gson.toJson(dish);
             Log.i("tag", json);
-            ToastUtil.show(this,"发布中，请稍后");
+            ToastUtil.show(this,"Publishing in progress, please wait");
             Response response1 = mongoDB.InsertOne("meals",json,true);
 
 
             if (response1.isSuccessful()){
-                ToastUtil.show(this,"发布成功！");
+                ToastUtil.show(this,"Successfully published!");
             }
         }
     }

@@ -5315,6 +5315,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -5534,7 +5535,6 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog
 layout dish_item_layout
-layout fragment_account
 layout fragment_main
 layout fragment_my
 layout fragment_my_dish

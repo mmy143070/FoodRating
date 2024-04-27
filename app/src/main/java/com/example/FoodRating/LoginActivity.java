@@ -81,17 +81,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             String lu = username.getText().toString();
             String lps = password.getText().toString();
             if (lu.equals("")) {
-                ToastUtil.show(this, "账号不能为空");
+                ToastUtil.show(this, "Username cannot be blank");
             } else if (lps.equals("")) {
-                ToastUtil.show(this, "密码不能为空");
+                ToastUtil.show(this, "Password cannot be blank");
             } else if (!isStaff && !isStudent) {
-                ToastUtil.show(this, "请选择身份");
+                ToastUtil.show(this, "Please select credential");
             } else {
                 User user;
                 user = new User(lu, lps, isStudent);
                 String juser = gson.toJson(user);
                 Log.i("tag", juser);
-                ToastUtil.show(ctx, "登录中请稍后");
+                ToastUtil.show(ctx, "Login in progress");
                 Response response = mongoDB.FindOne("users", juser,true);
 //                Log.i("tag12", String.valueOf(response.body().string()));
                 code = response.code();
@@ -102,9 +102,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     throw new RuntimeException(e);
                 }
                 if (document.getUser() == null) {
-                    ToastUtil.show(ctx, "登录失败，请检查用户名和密码");
+                    ToastUtil.show(ctx, "Login failed, please check username and password");
                 } else {
-                    ToastUtil.show(ctx, "登录成功，跳转中");
+                    ToastUtil.show(ctx, "Login successful, redirection in progress");
                     Bundle bundle = new Bundle();
                     bundle.putString("username", lu);
                     bundle.putBoolean("isStudent",isStudent);

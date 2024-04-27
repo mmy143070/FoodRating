@@ -5314,6 +5314,7 @@ int id textSpacerNoButtons 0x7f0902ca
 int id textSpacerNoTitle 0x7f0902cb
 int id textStart 0x7f0902cc
 int id textTop 0x7f0902cd
+int id textView 0x7f090324
 int id text_input_end_icon 0x7f0902ce
 int id text_input_error_icon 0x7f0902cf
 int id text_input_start_icon 0x7f0902d0
@@ -5533,7 +5534,6 @@ int layout design_text_input_end_icon 0x7f0c0036
 int layout design_text_input_start_icon 0x7f0c0037
 int layout dialog 0x7f0c0038
 int layout dish_item_layout 0x7f0c0039
-int layout fragment_account 0x7f0c003a
 int layout fragment_main 0x7f0c00cb
 int layout fragment_my 0x7f0c003d
 int layout fragment_my_dish 0x7f0c00cc

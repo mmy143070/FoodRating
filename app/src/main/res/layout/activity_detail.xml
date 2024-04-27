@@ -26,7 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10sp"
-            android:text="介绍："
+            android:text="Introduction："
             android:textSize="30sp" />
 
             <TextView
@@ -57,13 +57,13 @@
                 android:layout_width="200sp"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:hint="写一条评价" />
+                android:hint="Write a comment:" />
 
             <Button
                 android:id="@+id/post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="发表" />
+                android:text="Post" />
 
 
         </LinearLayout>
@@ -81,7 +81,7 @@
                 android:id="@+id/select_image"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="选择图片"
+                android:text="Select an image"
                 android:layout_gravity="center"/>
         </LinearLayout>
 
@@ -89,7 +89,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10sp"
-            android:text="评论："
+            android:text="Comments:"
             android:textSize="30sp" />
 
         <com.example.FoodRating.MyListView

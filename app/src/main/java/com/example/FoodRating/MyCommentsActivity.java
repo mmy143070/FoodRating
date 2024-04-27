@@ -155,7 +155,7 @@ public class MyCommentsActivity extends AppCompatActivity implements AdapterView
     private void UpdateClick(View v, String dishName, String username, Context ctx) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
         builder.setIcon(R.drawable.food);
-        builder.setTitle("更改评论");
+        builder.setTitle("Change comment");
         final View view = getLayoutInflater().inflate(R.layout.dialog, null);
         builder.setView(view);
         String[] items = {"5", "4", "3", "2", "1"};
@@ -175,35 +175,35 @@ public class MyCommentsActivity extends AppCompatActivity implements AdapterView
 
             }
         });
-        builder.setPositiveButton("修改", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("modify", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 EditText u_text = (EditText) view.findViewById(R.id.u_text);
                 String text = u_text.getText().toString();
                 String filter = "{ \"name\": \""+dishName+"\", \"comments.username\": \""+username+"\" }";
                 String update = "{ \"$set\": { \"comments.$.text\": \""+text+"\",\"comments.$.score\": \""+score+"\" } }";
-                ToastUtil.show(ctx,"修改中");
+                ToastUtil.show(ctx,"Under modification");
                 Response response = mongoDB.UpdateOne("meals", filter, update, true, true);
                 if (response.isSuccessful()){
-                    ToastUtil.show(ctx,"修改成功");
+                    ToastUtil.show(ctx,"Modified successfully");
                 }
                 dialog.cancel();
             }
         });
-        builder.setNeutralButton("删除", new DialogInterface.OnClickListener() {
+        builder.setNeutralButton("delete", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String filter = "{\"name\": \"" + dishName + "\"}";
                 String update = "{ \"$pull\": { \"comments\": { \"username\": \"" + username + "\" } } }";
-                ToastUtil.show(ctx,"删除中");
+                ToastUtil.show(ctx,"deleting");
                 Response response = mongoDB.UpdateOne("meals", filter, update, true, true);
                 if (response.isSuccessful()){
-                    ToastUtil.show(ctx,"删除成功");
+                    ToastUtil.show(ctx,"Delete successful");
                 }
                 dialog.cancel();
             }
         });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

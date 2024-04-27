@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="上传食物"
+        android:text="Post a food"
         android:textSize="50dp" />
 
     <LinearLayout
@@ -23,7 +23,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="食物名："
+            android:text="Food name:"
             android:textSize="20dp" />
 
         <EditText
@@ -31,7 +31,7 @@
             android:layout_width="175dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="请输入食物名" />
+            android:hint="Please input food name" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,7 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
-            android:text="介绍："
+            android:text="Introduction"
             android:textSize="20dp" />
 
         <EditText
@@ -52,19 +52,19 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:inputType="text"
-            android:hint="请输入食物介绍" />
+            android:hint="Please input introduction" />
     </LinearLayout>
     <Button
         android:id="@+id/ima_cho"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="选择图片"
+        android:text="Select an image"
         android:layout_marginTop="30sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="图片预览："
+        android:text="Image preview:"
         android:layout_gravity="center"/>
     <ImageView
         android:id="@+id/post_image"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="发布食物"
+        android:text="Post"
         android:layout_marginTop="20sp"/>
 
 

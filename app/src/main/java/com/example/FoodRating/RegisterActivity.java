@@ -82,7 +82,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         user = new User(name, isStudent);
         String juser = gson.toJson(user);
         Log.i("tag", juser);
-        ToastUtil.show(ctx, "检查中请稍后");
+        ToastUtil.show(ctx, "Checking, please wait a moment");
         Response response = mongoDB.FindOne("users", juser, true);
         Log.i("tag", String.valueOf(response.code()));
         String j = response.body().string();
@@ -91,10 +91,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         Log.i("tag", String.valueOf(document.getUser() == null));
 
         if (document.getUser() == null) {
-            ToastUtil.show(ctx, "用户名可用");
+            ToastUtil.show(ctx, "User name available");
             isOK = true;
         } else {
-            ToastUtil.show(ctx, "用户名不可用");
+            ToastUtil.show(ctx, "User name not available");
             isOK = false;
         }
     }
@@ -106,22 +106,22 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String rps2 = password2.getText().toString();
         User user;
         if (ru.equals("")) {
-            ToastUtil.show(this, "账号不能为空");
+            ToastUtil.show(this, "Account cannot be empty");
         } else if (rps.equals("")) {
-            ToastUtil.show(this, "密码不能为空");
+            ToastUtil.show(this, "Password cannot be empty");
         } else if (!rps.equals(rps2)) {
-            ToastUtil.show(this, "密码不一致");
+            ToastUtil.show(this, "Password inconsistency");
         } else if (!isStaff && !isStudent) {
-            ToastUtil.show(this, "请选择身份");
+            ToastUtil.show(this, "Please select an identity");
         } else if (!isOK) {
-            ToastUtil.show(this, "用户名未检查或不可用");
+            ToastUtil.show(this, "User name not checked or unavailable");
         } else {
             user = new User(ru, rps, isStudent);
             String juser = gson.toJson(user);
             Log.i("tag", juser);
 //            OkHttpClient client = new OkHttpClient().newBuilder()
 //                    .build();
-            ToastUtil.show(ctx, "注册中请稍后");
+            ToastUtil.show(ctx, "Registration in progress, please wait");
             Response response = mongoDB.InsertOne("users", juser, true);
             // 使用enqueue方法发送异步post请求
 //            client.newCall(request).enqueue(new Callback() {
@@ -154,11 +154,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             code = response.code();
 
             if (code == 201) {
-                ToastUtil.show(ctx, "注册成功");
+                ToastUtil.show(ctx, "login was successful");
                 register.setEnabled(false);
                 register.setTextColor(0xFFD0EFC6);
             } else {
-                ToastUtil.show(ctx, "注册失败，请稍后重试");
+                ToastUtil.show(ctx, "Registration failed, please try again later");
             }
 
         }

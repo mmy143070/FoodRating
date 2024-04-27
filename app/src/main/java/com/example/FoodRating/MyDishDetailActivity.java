@@ -117,23 +117,23 @@ public class MyDishDetailActivity extends AppCompatActivity {
     private void DeleteDish() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert);
         builder.setIcon(R.drawable.food);
-        builder.setTitle("确定删除吗");
+        builder.setTitle("Are you sure to delete it");
         final View view = getLayoutInflater().inflate(R.layout.dialog, null);
         view.findViewById(R.id.u_text).setVisibility(View.GONE);
         view.findViewById(R.id.u_spinner).setVisibility(View.GONE);
         builder.setView(view);
-        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("determine", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                ToastUtil.show(MyDishDetailActivity.this,"删除中");
+                ToastUtil.show(MyDishDetailActivity.this,"deleting");
                 Response response = mongoDB.DeleteOne("meals", "{\"name\":\"" + s_dishName + "\"}", true);
                 if(response.isSuccessful()){
-                    ToastUtil.show(MyDishDetailActivity.this,"删除成功");
+                    ToastUtil.show(MyDishDetailActivity.this,"Delete successful");
                 }
                 dialog.cancel();
             }
         });
-        builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.cancel();

@@ -150,9 +150,9 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
 //        s_username = "test";
         String commentText = text.getText().toString();
         if (commentText.equals("")) {
-            ToastUtil.show(this, "评论不能为空");
+            ToastUtil.show(this, "Comment cannot be blank");
         } else if (score.equals("")) {
-            ToastUtil.show(this, "请选择评分");
+            ToastUtil.show(this, "Please select score");
         }  else {
             String json = "{\n" +
                     "      \"username\": \"" + s_username + "\",\n" +
@@ -163,7 +163,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             String filter = "{\n" +
                     "        \"name\": \"" + s_dishName + "\"\n" +
                     "        }";
-            ToastUtil.show(this, "上传中");
+            ToastUtil.show(this, "Uploading");
             Response response = mongoDB.InsertOneComment("meals", filter, json, true, true);
 
             Response response2 = mongoDB.FindOne("meals", "{\n" +
@@ -203,7 +203,7 @@ public class DetailActivity extends AppCompatActivity implements View.OnClickLis
             String s = df.format(average);
             Response response3 = mongoDB.UpdateOne("meals", "{ \"name\": \"" + s_dishName + "\"}", "{ \"$set\": { \"avr_score\": \"" + s + "\" } }", true, false);
             if (response.isSuccessful() && response3.isSuccessful()) {
-                ToastUtil.show(this, "发表成功");
+                ToastUtil.show(this, "Upload successfully");
             }
 // 打印List<Integer>对象
             System.out.println(average);
